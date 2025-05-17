@@ -1,0 +1,53 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+ /*background-color: maroon;  if u want to add background colours to the dropdown options enable this*/
+    min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #ddd;}
+</style>
+</head>
+<body style="background-color:white;">
+
+
+<div class="dropdown">
+  <button class="dropbtn"><img src="mainicon.png" style="height:15">
+</button>
+  <div class="dropdown-content">
+    <a href="#"><a href="IMGDROP.html"><img src="home.jpg"style="height:20">Home</a></a>
+    <a href="#"><img src="shorts.png" style="height:30">Shorts</a>
+    <a href="#"><img src="others.jpg" style="height:20">Others</a>
+    <a href="#"><img src="library.jpg" style="height:20">Library</a>
+  </div> <!-- here u must change the height as suitable to the actual webpage and also can add the font size attribute -->
+</div>
+<!-- now for the links to the dropdown options:
+ home will link to main document itself: already added by me
+shorts will link to the one made by aahana
+others document will link to the one i have provioded and so will the library -->
+</body>
+</html>

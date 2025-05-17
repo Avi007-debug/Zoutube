@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <style>
+            .text{
+                display: inline;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class="text">
+            <strong>Name : </strong>
+        </div>
+        <script>
+            a=window.localStorage.getItem("current").split(",");
+            document.write(a[0]);
+        </script><br><br>
+        <div class="text"></div>
+            <strong>E-mail : </strong>
+        </div>
+        <script>
+            a=window.localStorage.getItem("current").split(",");
+            document.write(a[1]);
+        </script><br><br>
+        <div class="text"></div>
+            <strong>Completed Videos : </strong>
+        </div>
+        <script>
+            a=window.localStorage.getItem("current").split(",");
+            document.write("No data available");
+        </script><br>
+    </body>
+</html>

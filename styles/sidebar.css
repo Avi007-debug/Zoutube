@@ -1,0 +1,36 @@
+.sidebar{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 55px;
+    background-color: white;
+    width: 72px;
+    z-index: 200;
+    padding-top: 5px;
+}
+/*z index-> higher then on top of items with lower value, default is 0*/
+.sidebar_link{
+    height: 74px;
+    margin-bottom: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+/*cursor pointer gives the hand looking icon when we move over it*/
+.sidebar_link:hover{
+    background-color: rgb(231, 231, 231);
+}
+
+.sidebar_link img{
+    height: 24px;
+    margin-bottom: 4px;
+}
+
+.sidebar_link div{
+    font-family: Roboto, Arial;
+    font-size: 10px;
+}
+
+

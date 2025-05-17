@@ -1,0 +1,21 @@
+.my_channel_icon_container img{
+    position: absolute;
+}
+.my_channel_icon_container .sign a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    text-align: right;
+    background-color: white;
+    text-size-adjust: 30;
+    padding-block: 5px;
+    text-align-last: center;
+    
+}
+.my_channel_icon_container .sign{
+    display: none;
+}
+.my_channel_icon_container:hover .sign{
+    display: block;
+    margin-top: 100px;
+}

@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>
+           Mulitplicaton Tabl
+        </title>
+    </head>
+    <body>
+        <p id="demo""></p>
+        <script>
+        var x = parseInt(prompt('Enter an integer: '));
+        var y = parseInt(prompt('Enter a range: '));
+        document.write("<table border:1 cellpadding:20>");
+         for(let i = 1; i <= y; i++) 
+         { 
+        
+         document.write("<tr><th>"+(x)+"</th><th>*</th><th>"+(i)+"</th><th>=</th><th>"+(x*i)+"</th></tr>");
+         }
+         document.write("</table>");
+         </script>
+    </body>
+</html>

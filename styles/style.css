@@ -1,0 +1,15 @@
+.dropdown_2 img{
+    cursor:pointer;
+}
+.dropdown_2 .sign a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    
+}
+.dropdown_2 .sign{
+    display: none;
+}
+.dropdown_2:hover .sign{
+    display: block;
+}

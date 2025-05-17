@@ -1,0 +1,202 @@
+.search-bar {
+    display: block;
+    flex: 1;
+    width: 0;
+    height: 36px;
+    font-size: 16px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(194, 194, 194);
+    box-shadow: inset 1px 2px 5px
+    rgba(0, 0, 0, 0.05);
+    padding-left: 18px;
+    opacity: 1;
+  }
+  /*rgba has 4th value as opacity,
+  display block makes the element take the entire space in the line, next elements will go to the  next line
+  none just removes it,
+  inline makes the text/data in the div take as much space as it needs,
+  grid makes it look like a chessbox in which by default there is 1 column and u can define however many rows by adding 
+  data grid template rows and grid template columns
+
+  grid columns -> the number of px given makes that many number of columns,
+  if we have more div/elements in the grid that number of values then it 
+  sends itself to the next row
+  
+  1fr is used to take the rest of the space, if more than 1fr then the rest 
+  is divded equally, 2fr, etc divides the space in equal ratio
+
+  similar to this flex 1, 2 etc works*/
+  .search-bar::placeholder{
+    font-family: Roboto, Arial;
+    font-size: 16px;
+    padding-left: 0px;
+  }
+
+.header{
+  height: 55px;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 100;
+
+  background-color: white;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(235, 235, 235);
+}
+
+/*position fixed keeps it on the page while we scroll
+display flex makes the data inside in a flexible containter(div),
+flex direction defines if the div/containter should be horizontal or vertical
+
+justify content deals with the specififc rows/columns in the flexbox/containter/div
+align items is move stuff inside the divided rows/columns*/
+
+.left_section{
+  display: flex;
+  align-items: center;
+}
+.hamburger{
+  height: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+.youtube_logo {
+  margin-left: 12px;
+  height: 60px;
+}
+.voice {
+  height: 24px;
+  border-radius: 50px;
+}
+
+.search_button:hover .tooltip,
+.voice_button:hover .tooltip,
+.upload_icon_container:hover .tooltip,
+.apps_icon_container:hover .tooltip,
+.notif_icon_container:hover .tooltip,
+.my_channel_icon_container:hover .tooltip
+{
+  opacity: 1;
+}
+/*makes it so that the tooltip shows when u hover otherwise no*/
+.search_icon {
+  height: 24px;
+  border-radius: 50px;
+}
+.middle_section{
+  flex: 1;
+  margin-left: 70px;
+  margin-right: 35px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+}
+.search_button{
+  height: 36px;
+  width: 60px;
+  background-color: rgb(243, 243, 243);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(194, 194, 194);
+  margin-left: -1px;
+  margin-right: 8px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+}
+/*margin -ve pull the text/data closer to the other element, used here for overlapping, ig thats its purporse*/
+.search_button,
+.voice_button,
+.upload_icon_container,
+.apps_icon_container,
+.notif_icon_container,
+.my_channel_icon_container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*position relative keeps in fixed wrt some containter/div so while the containter moves so will it but and keep its position
+wrt items in the div/container, used for the timestamp thing*/
+.search_button .tooltip,
+.voice_button .tooltip,
+.upload_icon_container .tooltip,
+.apps_icon_container .tooltip,
+.notif_icon_container .tooltip,
+.my_channel_icon_container .tooltip{
+  position: absolute;
+  background-color: rgb(100, 100, 100);
+  color: white;
+  font-family: Roboto, Arial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 2px;
+  font-size: 12px;
+  opacity: 0;
+  bottom: -30px;
+  transition: 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+/*transition to make it smoother, try doing same thing for the sidebar to bring it in and out*/
+.voice_button{
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  width: 60px;
+  background-color: rgb(243, 243, 243);
+}
+.right_section{
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 24px;
+  flex-shrink: 0;
+}
+/*flex shrink tells how much an item can shrink, while we mess with the browser size, 0 means it wont shrink at all*/
+.notif {
+  height: 24px;
+}
+.notif_icon_counter{
+  position: relative;
+}
+.notif_count{
+  position: absolute;
+  top: -2px;
+  right: -5px;
+  background-color: rgb(192, 0, 0);
+  color: white;
+  font-family: Roboto, Arial;
+  font-size: 11px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: white;
+}
+.apps {
+  height: 24px;
+}
+.upload_icon {
+  height: 24px;
+}
+.my_channel {
+  height: 32px;
+  border-radius: 16px;
+}

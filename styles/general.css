@@ -1,0 +1,20 @@
+p {
+    font-family: Roboto, Arial;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /*padding is the gap between the text and its container,
+  while margin is the gap between the 2 elements*/
+body{
+  margin: 0;
+  padding-top: 80px;
+  padding-left: 96px;
+  padding-right: 24px;
+  background-color: rgb(245, 245, 245);
+}
+a:visited, a:link {
+  text-decoration: none;
+  color: black;
+}
+
+/*text decoration is the blue underling and stuff that shows on a used link, ig u can edit it too*/

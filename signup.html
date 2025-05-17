@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <style>
+            body{
+                background: orangered;
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content:center;
+            }
+            form{
+                width: 250px;
+                height: auto;
+                background: lightgrey;
+                border-radius: 10px;
+                padding: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <form onsubmit="myfunc(event)">
+            <label>User Name</label>
+            <input type="text" name="user" id="user" size="15"><br><br>
+            <label>Email</label>
+            <input type="email"name="email"id="email"><br><br>
+            <label>Password</label>
+            <input type="password"name="pwd"id="pwd"><br><br>
+            <label>Confirm Password</label>
+            <input type="password"name="cpwd"id="cpwd" size="12"><br><br>
+            <input type="submit">
+        </form>
+        
+        
+        <script>
+            function myfunc(event){
+                event.preventDefault();
+                var uname=document.getElementById("user").value;
+                var email=document.getElementById("email").value;
+                var pwd=document.getElementById("pwd").value;
+                var cpwd=document.getElementById("cpwd").value;
+                var c=window.localStorage.getItem(email);
+                const a=[uname,email,pwd];
+                if (c==null){
+                if (pwd==cpwd){
+                    localStorage.setItem(email,a);
+                    alert('Account made');
+                    window.open("ZouTube.html");
+                    window.close("signup.html");
+                }
+                else{
+                    alert("Passwords don't match");
+                }}
+                else{
+                    alert("Account already exists");
+                }
+            }
+        </script>
+        
+    </body>
+</html>
